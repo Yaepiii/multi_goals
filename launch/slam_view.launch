@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find explore_k)/launch/include/gmapping.launch.xml"/>
+
+  <!-- Move base -->
+ <include file="$(find explore_k)/launch/include/move_base.launch.xml"/>
+ 
+ <node name="rviz" pkg="rviz" type="rviz" args="-d $(find multi_goals)/rviz/multi_goals_view.rviz"/>
+ 
+</launch>
